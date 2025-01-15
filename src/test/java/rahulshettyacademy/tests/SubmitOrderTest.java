@@ -30,11 +30,11 @@ public class SubmitOrderTest extends BaseTest {
 		ProductCatalogue productCatalogue = landingPage.loginApplication(input.get("email"), input.get("password"));
 
 		// Product Page
-		productCatalogue.addProductToCart(input.get("product"));
+		productCatalogue.addProductToCart(input.get(productName));
 		CartPage cartPage = productCatalogue.goToCartPage();
 
 		// cart page
-		Assert.assertTrue(cartPage.verifyProductDisplay(input.get("product")));
+		Assert.assertTrue(cartPage.verifyProductDisplay(input.get(productName)));
 		CheckoutPage checkoutpage = cartPage.goToCheckout();
 
 		// checkout page
@@ -53,25 +53,22 @@ public class SubmitOrderTest extends BaseTest {
 		Assert.assertTrue(orderPage.verifyOrderDisplay(productName));
 	}
 
-	
-
-	// Extent Reports
-
-	@DataProvider
-	public Object[][] getData() throws IOException {
-
-		List<HashMap<String, String>> data = getJasonDataToMap(
 				System.getProperty("user.dir") + "\\src\\test\\java\\rahulshettyacademy\\data\\PurchaseOrder.json");
 		return new Object[][] { { data.get(0) }, { data.get(1) } };
 	}
 
-//	HashMap<String, String> map = new HashMap<String, String>();
-//	map.put("email","vaishnavi@sankhla.com");
-//	map.put("password", "Saini@12345678");
-//	map.put("product", "IPHONE 13 PRO");
-//	
-//	HashMap<String, String> map1 = new HashMap<String, String>();
-//	map1.put("email","selenium@testrun.com");
-//	map1.put("password", "Selenium@12345678");
-//	map1.put("product", "ADIDAS ORIGINAL");
-}
+	/
+
+		
+
+		
+
+			  
+			    map1.put("password", "Selenium@123
+			 
+			  
+			
+		  
+		  
+	 
+	 
